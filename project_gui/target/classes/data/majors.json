@@ -1,0 +1,522 @@
+[
+    {
+        "electives": [
+            {
+                "courses": [
+                    {
+                        "id": "5844e157-e966-4ca8-a60b-a86f76903c6d"
+                    },
+                    {
+                        "id": "a5f4b8c7-539a-47ba-9931-17e47b78959f"
+                    },
+                    {
+                        "id": "5d44445a-761c-493b-84f2-805a7c6b2af4"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "AIU"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "1e45ee57-74aa-47f0-ae20-46d973457505"
+                    },
+                    {
+                        "id": "3e52cd47-2db6-4577-a7df-d062eaaf000b"
+                    },
+                    {
+                        "id": "b08931d4-1c51-42df-96b6-aef74900873a"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "CMS"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "2bf59b38-42f3-4a2c-a689-53e6e4ab4f2b"
+                    },
+                    {
+                        "id": "b0687a3a-9e0f-479a-8df8-14f5478ef547"
+                    },
+                    {
+                        "id": "642f3119-63f7-4bdb-bdf1-4f1ed4b4a4de"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "GSS"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "d9ee653d-4c4f-4943-857c-9ad95bea5264"
+                    },
+                    {
+                        "id": "542433a9-cc0e-4d8c-8038-c5d3179c2d64"
+                    },
+                    {
+                        "id": "193087e4-a523-4b5f-9ce2-3aa1b5e614b3"
+                    }
+                ],
+                "minHours": 9,
+                "electiveType": "LibArts"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "0fb4ac09-b5df-47a0-a95b-566e31940f04"
+                    },
+                    {
+                        "id": "3ad398a2-c2b4-438a-ac0a-b0525030bf9d"
+                    },
+                    {
+                        "id": "cd9dc2fc-7414-47be-83ea-35519a9db40f"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "GHS"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "8699fb7e-844c-4fcd-b212-7a5ac8f5303e"
+                    },
+                    {
+                        "id": "06fd9a7c-6141-4ca3-ba63-efc1c4f8dce4"
+                    }
+                ],
+                "minHours": 6,
+                "electiveType": "GFL"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "a379a182-57c9-4b28-950d-35903009bce3"
+                    },
+                    {
+                        "id": "b6bf4208-6933-4e10-a961-118f12d7acba"
+                    }
+                ],
+                "minHours": 4,
+                "electiveType": "LabScience"
+            }
+        ],
+        "applicationAreas": [
+            {
+                "courses": [
+                    {
+                        "id": "6df385a5-518b-4fd4-8ec2-52c24db480df"
+                    },
+                    {
+                        "id": "4762a324-b55c-4816-bd96-c11c1bdbf0b9"
+                    },
+                    {
+                        "id": "3cd395f8-d6d5-4bed-919a-cc412514ad15"
+                    }
+                ],
+                "type": "DigitalDesign"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "5ec1b729-0227-4f20-9ad0-f3944d86a0b1"
+                    },
+                    {
+                        "id": "d6c94856-cd9a-4741-9dbb-056affb123ea"
+                    },
+                    {
+                        "id": "f36ec9b7-430d-4fc5-88dd-0f284650da0e"
+                    }
+                ],
+                "type": "Science"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "2e0285db-981b-4204-87b8-04aa7fab7ed3"
+                    },
+                    {
+                        "id": "56c36d9d-b24b-4cc1-b11c-c50774c05555"
+                    },
+                    {
+                        "id": "8eb88808-590a-46c2-9177-bfeaf1a08cb3"
+                    }
+                ],
+                "type": "Math"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "7ff23b34-bdcf-498d-8314-1d510bc8ffef"
+                    },
+                    {
+                        "id": "9ca16a4a-bf04-488c-a7b7-83699aa46cee"
+                    },
+                    {
+                        "id": "d9dc6c36-b50a-4288-b4d8-15d37a6fec6e"
+                    }
+                ],
+                "type": "Robotics"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "bca81410-e509-4dae-a331-e5df1b43ff76"
+                    },
+                    {
+                        "id": "6c6678cc-59c4-47e0-aa93-66663eae1bfd"
+                    },
+                    {
+                        "id": "3e52cd47-2db6-4577-a7df-d062eaaf000b"
+                    }
+                ],
+                "type": "Speech"
+            }
+        ],
+        "id": "9f367eb1-4970-4c43-bae2-d08897eedf06",
+        "majorName": "Computer Science",
+        "creditsRequired": 125,
+        "requiredCourses": [
+            {
+                "id": "12224407-e656-4fe7-9078-88f1d9dc8325"
+            },
+            {
+                "id": "4bd274cb-260e-47a5-9893-203a3943d704"
+            },
+            {
+                "id": "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627"
+            },
+            {
+                "id": "3cca9c4e-a195-4759-a761-cfe09adb20b8"
+            },
+            {
+                "id": "980e1056-4ed2-4459-b0e7-56d78eca5d73"
+            },
+            {
+                "id": "3d7aa3f8-bfb0-4f9e-af57-49818eacf9a6"
+            },
+            {
+                "id": "a379a182-57c9-4b28-950d-35903009bce3"
+            },
+            {
+                "id": "b35fcab4-a5d5-470a-855a-2f7a276f1d2e"
+            },
+            {
+                "id": "8b52945b-8079-4906-8e35-500bdd72cb8f"
+            },
+            {
+                "id": "b6bf4208-6933-4e10-a961-118f12d7acba"
+            },
+            {
+                "id": "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6"
+            },
+            {
+                "id": "9b9ea0d0-3574-44be-b6cf-1ef50ce2aa23"
+            },
+            {
+                "id": "789c6ed0-53e3-476c-8761-f08bf727d08c"
+            },
+            {
+                "id": "39046cda-f913-4f9b-a002-f06e7c59f235"
+            },
+            {
+                "id": "928eb174-dea9-4b98-80b1-ac594c4360f8"
+            },
+            {
+                "id": "66a95212-0d75-4fae-97ff-c3c76c29d47e"
+            },
+            {
+                "id": "75764c82-d463-4fcf-a367-e7f925416456"
+            },
+            {
+                "id": "a9f73275-ae03-4859-b101-4ebfeafa7a5a"
+            },
+            {
+                "id": "9230a9d3-b020-4a93-9f9c-ea8a8204130e"
+            },
+            {
+                "id": "dd218911-2c00-46b4-99fc-0aa909331369"
+            },
+            {
+                "id": "730005f1-113d-446e-865c-31b46dfbc924"
+            },
+            {
+                "id": "f8b358bf-d69e-4aae-b10c-8dc98f1f651f"
+            },
+            {
+                "id": "684f6d78-9f42-4e22-b447-7b15782007b3"
+            },
+            {
+                "id": "d71f3a41-5b83-40b6-94a7-609b01ca2caa"
+            },
+            {
+                "id": "6c8202fd-b31b-4647-b551-b7f4dbf007a0"
+            },
+            {
+                "id": "96cd3d5d-590a-4567-9cc3-787e03cc5140"
+            },
+            {
+                "id": "7100ca89-33cf-40da-acbe-84af49e92c3c"
+            },
+            {
+                "id": "c30f5f36-fc9c-49d4-b5c4-baec9cc82194"
+            },
+            {
+                "id": "f16c3f7d-4f83-4a11-8b47-632572514136"
+            },
+            {
+                "id": "f4b55e57-6034-4462-81ca-13c559697988"
+            },
+            {
+                "id": "42288ffd-4ead-4718-b840-4be2894d8f30"
+            },
+            {
+                "id": "dcf88287-b888-4fe0-949f-1b2ecd8af011"
+            },
+            {
+                "id": "12b2ee6d-d2c5-47fb-93de-08b5950ea2ae"
+            },
+            {
+                "id": "944f3d4d-9424-48c0-840e-18a79e18e00b"
+            },
+            {
+                "id": "f425f91f-92da-4261-be45-347d81b6ab9d"
+            }
+        ]
+    },
+    {
+        "electives": [
+            {
+                "courses": [
+                    {
+                        "id": "5844e157-e966-4ca8-a60b-a86f76903c6d"
+                    },
+                    {
+                        "id": "a5f4b8c7-539a-47ba-9931-17e47b78959f"
+                    },
+                    {
+                        "id": "5d44445a-761c-493b-84f2-805a7c6b2af4"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "AIU"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "1e45ee57-74aa-47f0-ae20-46d973457505"
+                    },
+                    {
+                        "id": "3e52cd47-2db6-4577-a7df-d062eaaf000b"
+                    },
+                    {
+                        "id": "b08931d4-1c51-42df-96b6-aef74900873a"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "CMS"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "2bf59b38-42f3-4a2c-a689-53e6e4ab4f2b"
+                    },
+                    {
+                        "id": "b0687a3a-9e0f-479a-8df8-14f5478ef547"
+                    },
+                    {
+                        "id": "642f3119-63f7-4bdb-bdf1-4f1ed4b4a4de"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "GSS"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "d9ee653d-4c4f-4943-857c-9ad95bea5264"
+                    },
+                    {
+                        "id": "542433a9-cc0e-4d8c-8038-c5d3179c2d64"
+                    },
+                    {
+                        "id": "193087e4-a523-4b5f-9ce2-3aa1b5e614b3"
+                    }
+                ],
+                "minHours": 9,
+                "electiveType": "LibArts"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "0fb4ac09-b5df-47a0-a95b-566e31940f04"
+                    },
+                    {
+                        "id": "3ad398a2-c2b4-438a-ac0a-b0525030bf9d"
+                    },
+                    {
+                        "id": "cd9dc2fc-7414-47be-83ea-35519a9db40f"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "GHS"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "8699fb7e-844c-4fcd-b212-7a5ac8f5303e"
+                    },
+                    {
+                        "id": "06fd9a7c-6141-4ca3-ba63-efc1c4f8dce4"
+                    }
+                ],
+                "minHours": 6,
+                "electiveType": "GFL"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "6390e71f-3219-4036-8347-5f8545de9a32"
+                    },
+                    {
+                        "id": "95e7009a-e959-4a3d-a546-293748d5d4f0"
+                    }
+                ],
+                "minHours": 6,
+                "electiveType": "BIM"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "a67e8606-4253-4960-a68a-008efcc844c2"
+                    }
+                ],
+                "minHours": 3,
+                "electiveType": "CIS"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "c85eb519-e97b-488b-ba02-2947764cfe92"
+                    },
+                    {
+                        "id": "732e0849-4531-43d5-ae8e-363b59958631"
+                    }
+                ],
+                "minHours": 8,
+                "electiveType": "SCI"
+            },
+            {
+                "courses": [
+                    {
+                        "id": "4b04470e-717c-4ac8-a5ca-34fd0572f148"
+                    },
+                    {
+                        "id": "174f9767-44a3-4e5b-99b0-51b2ee649397"
+                    }
+                ],
+                "minHours": 0,
+                "electiveType": "Unused"
+            }
+        ],
+        "applicationAreas": [
+            {
+                "courses": [
+                    {
+                        "id": "a87ed298-b059-48ae-8b45-cb91e4c376e6"
+                    }
+                ],
+                "type": "DigitalDesign"
+            }
+        ],
+        "id": "dc6b7328-5992-4f22-928e-b73c72b6e5c7",
+        "majorName": "Computer Information Systems",
+        "creditsRequired": 120,
+        "requiredCourses": [
+            {
+                "id": "12224407-e656-4fe7-9078-88f1d9dc8325"
+            },
+            {
+                "id": "4bd274cb-260e-47a5-9893-203a3943d704"
+            },
+            {
+                "id": "2e2ebf3f-c4d3-4dae-956b-d8afa7fca627"
+            },
+            {
+                "id": "3cca9c4e-a195-4759-a761-cfe09adb20b8"
+            },
+            {
+                "id": "980e1056-4ed2-4459-b0e7-56d78eca5d73"
+            },
+            {
+                "id": "57eaa5d5-a439-43b1-87fc-2d3a4c0b9cd6"
+            },
+            {
+                "id": "9b9ea0d0-3574-44be-b6cf-1ef50ce2aa23"
+            },
+            {
+                "id": "9583ee33-5e0b-43fe-9bc7-7ef3816da225"
+            },
+            {
+                "id": "f9bc9ca2-9fe9-43eb-8444-2f0fc53da6c3"
+            },
+            {
+                "id": "730005f1-113d-446e-865c-31b46dfbc924"
+            },
+            {
+                "id": "04c17131-ab1f-45f7-ac5e-a7d0091f41c7"
+            },
+            {
+                "id": "cecc9003-5bf5-4d17-b01d-895f24ea03a2"
+            },
+            {
+                "id": "39046cda-f913-4f9b-a002-f06e7c59f235"
+            },
+            {
+                "id": "928eb174-dea9-4b98-80b1-ac594c4360f8"
+            },
+            {
+                "id": "377ddfb9-de27-4996-8f72-c86999f08c03"
+            },
+            {
+                "id": "6c8202fd-b31b-4647-b551-b7f4dbf007a0"
+            },
+            {
+                "id": "96cd3d5d-590a-4567-9cc3-787e03cc5140"
+            },
+            {
+                "id": "f4b55e57-6034-4462-81ca-13c559697988"
+            },
+            {
+                "id": "554472ab-c7cb-4ac6-bf69-0d8b58a99d3d"
+            },
+            {
+                "id": "01f15c99-15af-4569-8cf0-4fe263053ed8"
+            },
+            {
+                "id": "c30f5f36-fc9c-49d4-b5c4-baec9cc82194"
+            },
+            {
+                "id": "86229990-45b3-48e6-b444-0b9db99e8a8c"
+            },
+            {
+                "id": "fdf13bc5-f270-4c26-a749-720a50d0b00a"
+            },
+            {
+                "id": "274f0d39-2889-48c6-8bef-ec460e958414"
+            },
+            {
+                "id": "42288ffd-4ead-4718-b840-4be2894d8f30"
+            },
+            {
+                "id": "f16c3f7d-4f83-4a11-8b47-632572514136"
+            },
+            {
+                "id": "5dfb6a47-ff2c-4977-ab64-588da4f687a4"
+            },
+            {
+                "id": "f425f91f-92da-4261-be45-347d81b6ab9d"
+            }
+        ]
+    }
+]
