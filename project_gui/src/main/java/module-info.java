@@ -7,6 +7,10 @@ module project_gui {
 
     exports project_gui;
 
+    opens controllers to javafx.fxml;
+
+    exports controllers;
+
     opens model to javafx.fxml;
 
     exports model;
