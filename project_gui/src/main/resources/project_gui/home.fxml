@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 
-<Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" stroke="BLACK" strokeType="INSIDE" width="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" />
+<Pane fx:id="login_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle fill="#73000a" height="400.0" stroke="TRANSPARENT" strokeType="INSIDE" width="300.0" />
+      <Button layoutX="421.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#btnSignInClicked" text="SIGN IN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txt_username" layoutX="332.0" layoutY="177.0" prefHeight="25.0" prefWidth="240.0" promptText="Username" />
+      <TextField fx:id="txt_password" layoutX="333.0" layoutY="209.0" prefHeight="25.0" prefWidth="240.0" promptText="Password" />
+      <Text layoutX="413.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="23.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your details and begin using DegreeWorks" />
+      <ImageView fitHeight="151.0" fitWidth="261.0" layoutX="22.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/usclogo_home_signup.png" />
+         </image>
+      </ImageView>
+      <Rectangle fill="WHITE" height="3.0" layoutX="132.0" layoutY="208.0" stroke="#ffffff00" strokeType="INSIDE" width="37.0" />
+      <Text fill="WHITE" layoutX="76.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hello, Friend!">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="117.0" layoutY="312.0" mnemonicParsing="false" onMouseClicked="#btnSignUpClicked" text="SIGN UP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbl_error" layoutX="383.0" layoutY="304.0" prefHeight="17.0" prefWidth="137.0" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

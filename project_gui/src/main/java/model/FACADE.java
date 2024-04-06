@@ -9,6 +9,7 @@ public class FACADE {
     private UserList userList;
     private CourseList courseList;
     private MajorList majorList;
+    private static FACADE facade;
 
     /**
      * Initializes the JSON instances
@@ -17,6 +18,17 @@ public class FACADE {
         userList = UserList.getInstance();
         courseList = CourseList.getInstance();
         majorList = MajorList.getInstance();
+    }
+
+    /**
+     * Singleton contructor
+     * 
+     * @return | FACADE instance
+     */
+    public static FACADE getInstance() {
+        if (facade == null)
+            facade = new FACADE();
+        return facade;
     }
 
     /**
