@@ -5,7 +5,7 @@ package model;
  */
 public abstract class DataConstants {
     // USER
-    protected static final String USER_FILE_NAME = "./src/users.json";
+    protected static final String USER_FILE_NAME = "project_gui/src/main/java/data/users.json";
     protected static final String USER_UUID = "id";
     protected static final String USER_USERNAME = "username";
     protected static final String USER_FIRST_NAME = "firstName";
@@ -30,7 +30,7 @@ public abstract class DataConstants {
     protected static final String ADVISOR_DEPARTMENT = "department";
 
     // MAJOR
-    protected static final String MAJOR_FILE_NAME = "./src/majors.json";
+    protected static final String MAJOR_FILE_NAME = "project_gui/src/main/java/data/majors.json";
     protected static final String MAJOR_ID = "id";
     protected static final String MAJOR_MAJOR_NAME = "majorName";
     protected static final String MAJOR_REQUIRED_COURSES = "requiredCourses";
@@ -48,7 +48,7 @@ public abstract class DataConstants {
     protected static final String ELECTIVE_COURSES = "courses";
 
     // COURSE
-    protected static final String COURSE_FILE_NAME = "./src/courses.json";
+    protected static final String COURSE_FILE_NAME = "project_gui/src/main/java/data/courses.json";
     protected static final String COURSE_ID = "id";
     protected static final String COURSE_COURSE_NAME = "courseName";
     protected static final String COURSE_SUBJECT = "subject";
