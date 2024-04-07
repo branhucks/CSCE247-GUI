@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentLandingController">
    <children>
       <Rectangle height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <ImageView fitHeight="98.0" fitWidth="200.0" layoutX="1.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
@@ -62,13 +61,39 @@
       </Text>
       <Text fill="#73000a" layoutX="87.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GRADUATION">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Text>
       <Text layoutX="87.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DegreeWorks is a tool for students to identify courses they have completed or review the courses they still need to take. It is a helpful tool to keep track of a student's studies and keep them on track for their expected commencement day. " wrappingWidth="184.015625">
          <font>
-            <Font size="9.0" />
+            <Font size="8.0" />
          </font>
       </Text>
+      <Text fill="#73000a" layoutX="289.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note from Advisor:">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Text>
+      <Label fx:id="lbl_note" alignment="TOP_LEFT" layoutX="288.0" layoutY="249.0" prefHeight="81.0" prefWidth="99.0" wrapText="true">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Label>
+      <Button layoutX="85.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnViewClicked" text="VIEW DEGREE PROGRESS">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="227.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnPrintClicked" text="PRINT SEMESTER PLAN">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Button>
+      <Rectangle fill="#73000a" height="120.0" layoutX="424.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="92.0" />
+      <ImageView fitHeight="130.0" fitWidth="91.0" layoutX="420.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/profilepic.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

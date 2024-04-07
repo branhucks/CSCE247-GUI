@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentLandingController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdvisorLandingController">
    <children>
       <Rectangle height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <ImageView fitHeight="98.0" fitWidth="200.0" layoutX="1.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
@@ -28,7 +28,7 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <Text fill="WHITE" layoutX="528.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT">
+      <Text fill="WHITE" layoutX="530.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISOR">
          <font>
             <Font name="System Italic" size="10.0" />
          </font>
@@ -38,23 +38,13 @@
             <Image url="@../images/studentlanding.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="lbl_major" layoutX="174.0" layoutY="60.0" prefHeight="20.0" prefWidth="145.0" textFill="WHITE">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbl_class" layoutX="354.0" layoutY="60.0" prefHeight="20.0" prefWidth="145.0" textFill="WHITE">
-         <font>
-            <Font size="10.0" />
-         </font>
-      </Label>
       <Rectangle fill="#73000a" height="37.0" layoutX="88.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="189.0" />
       <Text fill="WHITE" layoutX="94.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEGREEWORKS">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="87.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE PATH TO">
+      <Text layoutX="87.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISING TO">
          <font>
             <Font size="18.0" />
          </font>
@@ -69,22 +59,17 @@
             <Font size="8.0" />
          </font>
       </Text>
-      <Text fill="#73000a" layoutX="289.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note from Advisor:">
+      <Text fill="#73000a" layoutX="289.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To-Do:">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Text>
-      <Label fx:id="lbl_note" alignment="TOP_LEFT" layoutX="288.0" layoutY="249.0" prefHeight="81.0" prefWidth="99.0" wrapText="true">
-         <font>
-            <Font size="8.0" />
-         </font>
-      </Label>
-      <Button layoutX="85.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnViewClicked" text="VIEW DEGREE PROGRESS">
+      <Button layoutX="85.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnAddAdviseeClicked" text="ADD ADVISEE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button layoutX="227.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnPrintClicked" text="PRINT SEMESTER PLAN">
+      <Button layoutX="174.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnViewAdviseesClicked" text="VIEW ADVISEES">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
@@ -95,5 +80,15 @@
             <Image url="@../images/profilepic.png" />
          </image>
       </ImageView>
+      <Text layoutX="289.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nothing planned for today!" wrappingWidth="99.34765625">
+         <font>
+            <Font size="8.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="207.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department: Computer Information Systems">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
    </children>
 </Pane>

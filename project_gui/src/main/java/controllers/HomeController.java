@@ -1,5 +1,6 @@
 package controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -19,8 +20,11 @@ public class HomeController implements Initializable {
     @FXML
     private Label lbl_error;
 
+    private User user;
+    private UserList userList = UserList.getInstance();
+
     @FXML
-    void btnSignInClicked(MouseEvent event) {
+    void btnSignInClicked(MouseEvent event) throws IOException {
         String username = txt_username.getText();
         String password = txt_password.getText();
 
@@ -31,15 +35,18 @@ public class HomeController implements Initializable {
             return;
         }
 
-        /**
-         * TODO
-         * App.setRoot("StudentLanding");
-         */
+        user = userList.getUser(username);
+        if (user instanceof Student)
+            App.setRoot("studentlanding");
+        else if (user instanceof Advisor)
+            App.setRoot("advisorlanding");
+
+        // App.setRoot("studentlanding");
     }
 
     @FXML
-    void btnSignUpClicked(MouseEvent event) {
-        // App.setRoot("SignupStudent");
+    void btnSignUpClicked(MouseEvent event) throws IOException {
+        App.setRoot("signup");
     }
 
     @Override

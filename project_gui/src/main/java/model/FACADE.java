@@ -88,24 +88,6 @@ public class FACADE {
     }
 
     /**
-     * Getter for Student
-     * 
-     * @return | a Student
-     */
-    public Student getStudent() {
-        return student;
-    }
-
-    /**
-     * Getter for Advisor
-     * 
-     * @return | an Advisor
-     */
-    public Advisor getAdvisor() {
-        return advisor;
-    }
-
-    /**
      * Login to the system with given username
      * 
      * @param username |username of the user logging in
@@ -121,6 +103,24 @@ public class FACADE {
             advisor = (Advisor) user;
         }
         return true;
+    }
+
+    /**
+     * Getter for Student
+     * 
+     * @return | a Student
+     */
+    public Student getStudent() {
+        return student;
+    }
+
+    /**
+     * Getter for Advisor
+     * 
+     * @return | an Advisor
+     */
+    public Advisor getAdvisor() {
+        return advisor;
     }
 
     /**
