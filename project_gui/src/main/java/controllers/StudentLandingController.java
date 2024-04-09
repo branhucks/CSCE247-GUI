@@ -36,8 +36,8 @@ public class StudentLandingController implements Initializable {
     }
 
     @FXML
-    void btnViewClicked(MouseEvent event) {
-
+    void btnViewClicked(MouseEvent event) throws IOException {
+        App.setRoot("studentdegreeprogress");
     }
 
     @Override
