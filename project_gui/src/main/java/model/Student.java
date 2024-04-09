@@ -118,6 +118,9 @@ public class Student extends User {
     }
 
     public SemesterPlan getEightSemesterPlan() {
+        if (eightSemesterPlan == null) {
+            return new SemesterPlan(new ArrayList<StudentCourse>());
+        }
         return eightSemesterPlan;
     }
 
@@ -138,6 +141,9 @@ public class Student extends User {
     }
 
     public ApplicationType getApplicationType() {
+        if (applicationType == null) {
+            return ApplicationType.NULL;
+        }
         return applicationType;
     }
 
