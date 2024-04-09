@@ -41,32 +41,29 @@ public class SignupController implements Initializable {
     @FXML
     private Label adv_lbl_error;
 
+    private User user;
+    private UserList userList = UserList.getInstance();
     FACADE facade = FACADE.getInstance();
-
-    @FXML // ResourceBundle that was given to the FXMLLoader
-    private ResourceBundle resources;
-
-    @FXML // URL location of the FXML file that was given to the FXMLLoader
-    private URL location;
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
-    }
 
     @FXML
     void btnStuSignup(MouseEvent event) throws IOException {
         String firstName = stu_first_name.getText();
         String lastName = stu_last_name.getText();
         String username = stu_username.getText();
-        // String password = stu_password.getText();
         String major = stu_major.getText();
         String classification = stu_classification.getText();
 
+        if (firstName == "" || lastName == "" || username == "" || major == "" || classification == "") {
+            stu_lbl_error.setText("Invalid Credentials.");
+            return;
+        }
+
         if (facade.registerStudent(username, firstName, lastName, "Student", major, classification)) {
-            App.setRoot("studentlanding");
-        } else {
-            stu_lbl_error.setText("Invalid");
+            facade.saveUsers();
+            if (facade.login(username)) {
+                user = facade.getUser();
+                App.setRoot("studentlanding");
+            }
         }
     }
 
@@ -77,12 +74,23 @@ public class SignupController implements Initializable {
         String username = adv_username.getText();
         String department = adv_department.getText();
 
+        if (firstName == "" || lastName == "" || username == "" || department == "") {
+            adv_lbl_error.setText("Invalid Credentials.");
+            return;
+        }
+
         if (facade.registerAdvisor(username, firstName, lastName, "Advisor", department)) {
-            App.setRoot("advisorlanding");
-        } else {
-            adv_lbl_error.setText("Invalid");
+            facade.saveUsers();
+            if (facade.login(username)) {
+                user = facade.getUser();
+                App.setRoot("advisorlanding");
+            }
         }
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+    }
+
 }
-// test

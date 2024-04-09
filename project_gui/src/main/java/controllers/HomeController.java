@@ -26,7 +26,6 @@ public class HomeController implements Initializable {
     @FXML
     void btnSignInClicked(MouseEvent event) throws IOException {
         String username = txt_username.getText();
-        String password = txt_password.getText();
 
         FACADE facade = FACADE.getInstance();
 
@@ -40,8 +39,6 @@ public class HomeController implements Initializable {
             App.setRoot("studentlanding");
         else if (user instanceof Advisor)
             App.setRoot("advisorlanding");
-
-        // App.setRoot("studentlanding");
     }
 
     @FXML

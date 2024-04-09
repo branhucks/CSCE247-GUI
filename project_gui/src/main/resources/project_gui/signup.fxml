@@ -25,7 +25,7 @@
                      </image>
                   </ImageView>
                   <Rectangle fill="WHITE" height="3.0" layoutX="130.0" layoutY="210.0" stroke="#ffffff00" strokeType="INSIDE" width="40.0" />
-                  <Text fill="WHITE" layoutX="30.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome New Student!">
+                  <Text fill="WHITE" layoutX="15.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome New Student!">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -42,8 +42,8 @@
                   <TextField fx:id="stu_password" layoutX="350.0" layoutY="160.0" minWidth="220.0" promptText="password" />
                   <TextField fx:id="stu_major" layoutX="350.0" layoutY="195.0" minWidth="220.0" promptText="major" />
                   <TextField fx:id="stu_classification" layoutX="350.0" layoutY="230.0" minWidth="220.0" promptText="classification" />
-                  <Button fx:id="stu_sign_up" layoutX="400.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#btnStuSignup" prefHeight="33.0" prefWidth="117.0" text="Sign Up" />
-                  <Label fx:id="stu_lbl_error" layoutX="400.0" layoutY="325.0" prefHeight="17.0" prefWidth="127.0" textAlignment="CENTER" textFill="RED" />
+                  <Button layoutX="400.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#btnStuSignup" prefHeight="33.0" prefWidth="117.0" text="Sign Up" />
+                  <Label fx:id="stu_lbl_error" layoutX="391.0" layoutY="325.0" prefHeight="18.0" prefWidth="136.0" textAlignment="CENTER" textFill="RED" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -58,7 +58,7 @@
                      </image>
                   </ImageView>
                   <Rectangle fill="WHITE" height="3.0" layoutX="130.0" layoutY="210.0" stroke="#ffffff00" strokeType="INSIDE" width="40.0" />
-                  <Text fill="WHITE" layoutX="35.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome New Advisor!">
+                  <Text fill="WHITE" layoutX="20.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome New Advisor!">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
@@ -74,8 +74,8 @@
                   <TextField fx:id="adv_username" layoutX="350.0" layoutY="125.0" minWidth="220.0" promptText="username" />
                   <TextField fx:id="adv_password" layoutX="350.0" layoutY="160.0" minWidth="220.0" promptText="password" />
                   <TextField fx:id="adv_department" layoutX="350.0" layoutY="195.0" minWidth="220.0" promptText="department" />
-                  <Button fx:id="adv_sign_up" layoutX="400.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#btnStuSignup" prefHeight="33.0" prefWidth="117.0" text="Sign Up" />
-                  <Label fx:id="adv_lbl_error" layoutX="400.0" layoutY="325.0" prefHeight="17.0" prefWidth="127.0" textAlignment="CENTER" textFill="RED" />
+                  <Button layoutX="400.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#btnAdvSignup" prefHeight="33.0" prefWidth="117.0" text="Sign Up" />
+                  <Label fx:id="adv_lbl_error" layoutX="389.0" layoutY="325.0" prefHeight="18.0" prefWidth="138.0" textAlignment="CENTER" textFill="RED" />
                </children></AnchorPane>
       </content>
     </Tab>
