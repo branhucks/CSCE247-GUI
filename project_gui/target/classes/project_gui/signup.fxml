@@ -43,7 +43,7 @@
                   <TextField fx:id="stu_major" layoutX="350.0" layoutY="195.0" minWidth="220.0" promptText="major" />
                   <TextField fx:id="stu_classification" layoutX="350.0" layoutY="230.0" minWidth="220.0" promptText="classification" />
                   <Button fx:id="stu_sign_up" layoutX="400.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#btnStuSignup" prefHeight="33.0" prefWidth="117.0" text="Sign Up" />
-                  <Label fx:id="lbl_error" layoutX="400.0" layoutY="325.0" prefHeight="17.0" prefWidth="127.0" textAlignment="CENTER" textFill="RED" />
+                  <Label fx:id="stu_lbl_error" layoutX="400.0" layoutY="325.0" prefHeight="17.0" prefWidth="127.0" textAlignment="CENTER" textFill="RED" />
                </children></AnchorPane>
       </content>
     </Tab>
@@ -75,7 +75,7 @@
                   <TextField fx:id="adv_password" layoutX="350.0" layoutY="160.0" minWidth="220.0" promptText="password" />
                   <TextField fx:id="adv_department" layoutX="350.0" layoutY="195.0" minWidth="220.0" promptText="department" />
                   <Button fx:id="adv_sign_up" layoutX="400.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#btnStuSignup" prefHeight="33.0" prefWidth="117.0" text="Sign Up" />
-                  <Label fx:id="lbl_error1" layoutX="400.0" layoutY="325.0" prefHeight="17.0" prefWidth="127.0" textAlignment="CENTER" textFill="RED" />
+                  <Label fx:id="adv_lbl_error" layoutX="400.0" layoutY="325.0" prefHeight="17.0" prefWidth="127.0" textAlignment="CENTER" textFill="RED" />
                </children></AnchorPane>
       </content>
     </Tab>
