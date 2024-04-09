@@ -30,8 +30,8 @@ public class AdvisorLandingController implements Initializable {
     }
 
     @FXML
-    void btnViewAdviseesClicked(MouseEvent event) {
-
+    void btnViewAdviseesClicked(MouseEvent event) throws IOException {
+        App.setRoot("viewadvisees");
     }
 
     @Override
