@@ -248,4 +248,107 @@ public class Student extends User {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Prints the student's completed courses
+     * 
+     * @param eightSemesterPlan | the student's eight semester plan
+     * @param requiredCourses   | the required courses of the student's major
+     */
+    public String printCompletedCourses(SemesterPlan eightSemesterPlan, ArrayList<Course> requiredCourses) {
+        StringBuilder completedCourses = new StringBuilder();
+        for (Course requiredCourse : requiredCourses) {
+            for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
+                if (requiredCourse.courseID().equals(studentCourse.getCourseID())
+                        && studentCourse.getStatus().equals("Completed")) {
+                    completedCourses.append("Course ID: ").append(requiredCourse.courseID())
+                            .append("\t\tGrade: ").append(studentCourse.getGrade())
+                            .append("\t\t\tPassed: ").append(studentCourse.getPassed())
+                            .append("\n");
+                }
+            }
+        }
+        return completedCourses.toString();
+    }
+
+    /**
+     * Returns a string representation of the student's incomplete courses
+     * 
+     * @param eightSemesterPlan | the student's eight semester plan
+     * @param requiredCourses   | the required courses of the student's major
+     * @return a string representation of the student's incomplete courses
+     */
+    public String printIncompleteCourses(SemesterPlan eightSemesterPlan, ArrayList<Course> requiredCourses) {
+        StringBuilder incompleteCourses = new StringBuilder();
+        for (Course requiredCourse : requiredCourses) {
+            for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
+                if (requiredCourse.courseID().equals(studentCourse.getCourseID())
+                        && studentCourse.getStatus().equals("Planned")) {
+                    incompleteCourses.append("Course ID: ").append(requiredCourse.courseID()).append("\n");
+                }
+            }
+        }
+        return incompleteCourses.toString();
+    }
+
+    /**
+     * Returns a string representation of the student's electives progress
+     * 
+     * @param majorElectives | the electives for the student's major
+     * @param courseList     | the list of courses
+     * @return a string representation of the student's electives progress
+     */
+    public String printElectiveProgress(ArrayList<Electives> majorElectives, CourseList courseList) {
+        StringBuilder electiveProgress = new StringBuilder();
+        for (Electives electives : majorElectives) {
+            String formatString = "%-20s Credits Needed: %d\n";
+            electiveProgress.append(
+                    String.format(formatString, electives.getElectiveType() + " Elective", electives.getMinHours()));
+            for (String electiveUUID : electives.getCourses()) {
+                for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
+                    if (studentCourse.getCourseID().equals(courseList.getCourseIDByCourseUUID(electiveUUID))
+                            && studentCourse.getStatus().equals("Completed")) {
+                        electiveProgress.append("\tCourse ID: ").append(studentCourse.getCourseID())
+                                .append("\t\tGrade: ").append(studentCourse.getGrade())
+                                .append("\t\tPassed: ").append(studentCourse.getPassed()).append("\n");
+                    }
+                }
+            }
+        }
+        return electiveProgress.toString();
+    }
+
+    /**
+     * Returns a string representation of the student's application area progress
+     * 
+     * @param applicationAreas | the possible application areas
+     * @param courseList       | the list of courses
+     * @return a string representation of the student's application area progress
+     */
+    public String printApplicationAreaProgress(ArrayList<ApplicationArea> applicationAreas, CourseList courseList) {
+        StringBuilder applicationAreaProgress = new StringBuilder();
+        if (getApplicationType().toString().equals("NULL")) {
+            applicationAreaProgress.append("No Application Area Selected.\tCredits Needed: 9\n");
+            return applicationAreaProgress.toString();
+        } else {
+            applicationAreaProgress.append("Application Area: ").append(getApplicationType().toString())
+                    .append("\tCredits Needed: 9\n");
+        }
+        for (ApplicationArea applicationArea : applicationAreas) {
+            if (applicationArea.getType().toString().equals(getApplicationType().toString())) {
+                for (String aaCourseUUID : applicationArea.getCourses()) {
+                    for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
+                        if (studentCourse.getCourseID().equals(courseList.getCourseIDByCourseUUID(aaCourseUUID))
+                                && studentCourse.getStatus().equals("Completed")) {
+                            applicationAreaProgress.append("Course ID: ").append(studentCourse.getCourseID())
+                                    .append("\tGrade: ").append(studentCourse.getGrade())
+                                    .append("\t\tPassed ").append(studentCourse.getPassed()).append("\n");
+                        }
+                    }
+                }
+            }
+        }
+        return applicationAreaProgress.toString();
+    }
+
 }

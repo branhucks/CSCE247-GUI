@@ -357,4 +357,58 @@ public class FACADE {
         student.viewProgress(eightSemesterPlan, requiredCourses, studentMajor.getElectives(),
                 studentMajor.getApplicationAreas(), courseList, majorList);
     }
+
+    /**
+     * Prints a student's completed courses
+     */
+    public String printCompletedCourses() {
+        SemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
+        String majorUUID = student.getMajor();
+        Major studentMajor = majorList.getMajorByUUID(majorUUID);
+        ArrayList<String> requiredCoursesUUIDs = studentMajor.getRequiredCourses();
+        ArrayList<Course> requiredCourses = new ArrayList<>();
+        for (String uuid : requiredCoursesUUIDs) {
+            requiredCourses.add(getCourseByUUID(uuid));
+        }
+        for (String uuid : requiredCoursesUUIDs) {
+            requiredCourses.add(getCourseByUUID(uuid));
+        }
+        return student.printCompletedCourses(eightSemesterPlan, requiredCourses);
+    }
+
+    /**
+     * Prints a student's incomplete courses
+     */
+    public String printIncompleteCourses() {
+        SemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
+        String majorUUID = student.getMajor();
+        Major studentMajor = majorList.getMajorByUUID(majorUUID);
+        ArrayList<String> requiredCoursesUUIDs = studentMajor.getRequiredCourses();
+        ArrayList<Course> requiredCourses = new ArrayList<>();
+        for (String uuid : requiredCoursesUUIDs) {
+            requiredCourses.add(getCourseByUUID(uuid));
+        }
+        for (String uuid : requiredCoursesUUIDs) {
+            requiredCourses.add(getCourseByUUID(uuid));
+        }
+        return student.printIncompleteCourses(eightSemesterPlan, requiredCourses);
+    }
+
+    /**
+     * Prints a student's elective progress
+     */
+    public String printElectiveProgress() {
+        String majorUUID = student.getMajor();
+        Major studentMajor = majorList.getMajorByUUID(majorUUID);
+        return student.printElectiveProgress(studentMajor.getElectives(), courseList);
+    }
+
+    /**
+     * Prints a student's application area progress
+     */
+    public String printApplicationAreaProgress() {
+        String majorUUID = student.getMajor();
+        Major studentMajor = majorList.getMajorByUUID(majorUUID);
+        return student.printApplicationAreaProgress(studentMajor.getApplicationAreas(), courseList);
+    }
 }
