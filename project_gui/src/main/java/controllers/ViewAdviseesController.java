@@ -16,6 +16,8 @@ public class ViewAdviseesController implements Initializable {
     private Label lbl_name;
     @FXML
     private Label lbl_num_advisees;
+    @FXML
+    private Label lbl_advisees_list;
 
     private FACADE facade;
     private Advisor advisor;
@@ -36,6 +38,8 @@ public class ViewAdviseesController implements Initializable {
         facade = FACADE.getInstance();
         advisor = facade.getAdvisor();
         lbl_name.setText(advisor.getFirstName() + " " + advisor.getLastName());
+        lbl_num_advisees.setText(String.valueOf(advisor.getAdvisees().size()));
+        lbl_advisees_list.setText(facade.printAdviseesList(advisor.getAdvisees()));
     }
 
 }

@@ -411,4 +411,12 @@ public class FACADE {
         Major studentMajor = majorList.getMajorByUUID(majorUUID);
         return student.printApplicationAreaProgress(studentMajor.getApplicationAreas(), courseList);
     }
+
+    public String printAdviseesList(ArrayList<String> adviseesUUIDs) {
+        ArrayList<Student> advisees = new ArrayList<>();
+        for (String adviseeUUID : adviseesUUIDs) {
+            advisees.add(userList.getStudentByUUID(adviseeUUID));
+        }
+        return advisor.printAdviseesList(advisees);
+    }
 }

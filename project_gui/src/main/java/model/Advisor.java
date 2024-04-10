@@ -102,4 +102,14 @@ public class Advisor extends User {
     public void enterGrades(Student student, ArrayList<Course> courses) {
         // TODO
     }
+
+    public String printAdviseesList(ArrayList<Student> advisees) {
+        StringBuilder adviseesList = new StringBuilder();
+        for (Student student : advisees) {
+            adviseesList.append(student.getStudentID()).append("\t\t\t").append(student.getFirstName()).append(" ")
+                    .append(student.getLastName());
+            adviseesList.append("\n");
+        }
+        return adviseesList.toString();
+    }
 }
