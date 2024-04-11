@@ -293,14 +293,23 @@ public class FACADE {
      * 
      * @param studentID | the student's ID to be added
      */
-    public void addAdvisee(String studentID) {
-        String studentUUID = userList.getStudentUUIDByStudentID(studentID);
-        advisor.addAdvisee(studentUUID);
-        for (Student student : userList.getStudents()) {
-            if (advisor.getAdvisees().contains(student.getUUID())) {
-                student.setAdvisor(advisor.getUUID());
+    public boolean addAdvisee(String studentID) {
+        boolean check = true;
+        try{
+            String studentUUID = userList.getStudentUUIDByStudentID(studentID);
+            if (studentUUID == null){
+                check = false;
             }
-        }
+            advisor.addAdvisee(studentUUID);
+            for (Student student : userList.getStudents()) {
+                if (advisor.getAdvisees().contains(student.getUUID())) {
+                    student.setAdvisor(advisor.getUUID());
+                }
+            }
+            return check;
+        } catch(Error e){
+            return false;
+        }  
     }
 
     /**

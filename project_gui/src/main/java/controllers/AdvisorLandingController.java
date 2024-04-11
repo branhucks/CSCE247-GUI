@@ -19,8 +19,8 @@ public class AdvisorLandingController implements Initializable {
     private Advisor advisor;
 
     @FXML
-    void btnAddAdviseeClicked(MouseEvent event) {
-
+    void btnAddAdviseeClicked(MouseEvent event) throws IOException {
+        App.setRoot("addadvisee");
     }
 
     @FXML
