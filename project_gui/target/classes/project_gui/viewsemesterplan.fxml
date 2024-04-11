@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="895.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="888.0" prefWidth="600.0">
+         <children>
+            <Text layoutX="37.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
+            <Text layoutX="37.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+            <Text layoutX="33.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classification:" />
+            <Text layoutX="33.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall GPA:" />
+            <Text layoutX="252.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College:" />
+            <Text layoutX="252.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:" />
+            <Text layoutX="252.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application Area:" />
+            <Text layoutX="256.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major GPA:" />
+            <Label fx:id="name_lbl" layoutX="85.0" layoutY="36.0" text="Label" />
+            <Label fx:id="id_lbl" layoutX="71.0" layoutY="71.0" text="Label" />
+            <Label fx:id="classification_lbl" layoutX="124.0" layoutY="101.0" text="Label" />
+            <Label fx:id="overall_gpa_lbl" layoutX="110.0" layoutY="134.0" text="Label" />
+            <Label fx:id="college_lbl" layoutX="316.0" layoutY="36.0" text="Label" />
+            <Label fx:id="major_lbl" layoutX="302.0" layoutY="71.0" text="Label" />
+            <Label fx:id="application_area_lbl" layoutX="358.0" layoutY="110.0" text="Label" />
+            <Label fx:id="major_gpa_lbl" layoutX="336.0" layoutY="143.0" text="Label" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
