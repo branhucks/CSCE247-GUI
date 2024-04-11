@@ -48,7 +48,7 @@ public class StudentElectivesController implements Initializable {
 
     @FXML
     void btnChooseElectives(MouseEvent event) throws Exception {
-
+        App.setRoot("chooseelectives");
     }
 
     @FXML

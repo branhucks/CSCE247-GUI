@@ -115,4 +115,29 @@ public class Major {
     public void setCreditsRequired(int creditsRequired) {
         this.creditsRequired = creditsRequired;
     }
+
+    /**
+     * Prints a list of all electives and the possible courses
+     * 
+     * @param courseList | the list of courses
+     * @return | a string representation of the list of electives
+     */
+    public String printElectives(CourseList courseList) {
+        StringBuilder electiveList = new StringBuilder();
+        for (Electives elective : electives) {
+            electiveList.append(String.format("%-110s", elective.getElectiveType()));
+            electiveList.append("Credits Needed: ").append(elective.getMinHours());
+            electiveList.append("\n");
+            for (String courseUUID : elective.getCourses()) {
+                Course course = courseList.getCourseByUUID(courseUUID);
+                electiveList.append(String.format("%-20s", course.courseID())); // Adjust the width as needed
+                electiveList.append("\t\t");
+                electiveList.append(course.getCourseName());
+                electiveList.append("\n");
+            }
+            electiveList.append("\n");
+        }
+        return electiveList.toString();
+    }
+
 }

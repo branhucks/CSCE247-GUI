@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -37,9 +38,25 @@ public class ChooseElectivesController implements Initializable {
     private Label lbl_overall_gpa;
     @FXML
     private Label lbl_electives;
+    @FXML
+    private CheckBox box_gfl_1;
+    @FXML
+    private CheckBox box_gfl_2;
 
     private FACADE facade;
     private Student student;
+
+    @FXML
+    void btnPlanCourses(MouseEvent event) throws IOException {
+        facade = FACADE.getInstance();
+        if (box_gfl_1.isSelected() && box_gfl_2.isSelected()) {
+            facade.addElectiveCourses("FREN", "109", "FREN", "110", 6, 8);
+            facade.saveUsers();
+        } else {
+            return;
+        }
+        App.setRoot("studentelectives");
+    }
 
     @FXML
     void btnLogoutClicked(MouseEvent event) throws IOException {
@@ -62,7 +79,7 @@ public class ChooseElectivesController implements Initializable {
         lbl_major_info.setText(facade.getMajorByUUID(student.getMajor()).getMajorName());
         lbl_application_area.setText(student.getApplicationType().toString());
         lbl_major_gpa.setText("3.38");
-        lbl_electives.setText(facade.printElectiveProgress());
+        lbl_electives.setText(facade.printMajorElectives(student.getMajor()));
     }
 
 }

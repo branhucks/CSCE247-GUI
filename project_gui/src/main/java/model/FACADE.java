@@ -412,11 +412,33 @@ public class FACADE {
         return student.printApplicationAreaProgress(studentMajor.getApplicationAreas(), courseList);
     }
 
+    /**
+     * Prints the advisees list to the console
+     * 
+     * @param adviseesUUIDs | the array of UUIDs for each student
+     * @return | a string representation of the advisees list
+     */
     public String printAdviseesList(ArrayList<String> adviseesUUIDs) {
         ArrayList<Student> advisees = new ArrayList<>();
         for (String adviseeUUID : adviseesUUIDs) {
             advisees.add(userList.getStudentByUUID(adviseeUUID));
         }
         return advisor.printAdviseesList(advisees);
+    }
+
+    /**
+     * Prints the list of electives for the major
+     * 
+     * @param majorUUID | the given major
+     * @return | a string representation of the list of electives
+     */
+    public String printMajorElectives(String majorUUID) {
+        Major major = getMajorByUUID(majorUUID);
+        return major.printElectives(courseList);
+    }
+
+    public void addElectiveCourses(String subject1, String num1, String subject2, String num2, int sem1, int sem2) {
+        getEightSemesterPlan().addCourse(subject1, num1, sem1);
+        getEightSemesterPlan().addCourse(subject2, num2, sem2);
     }
 }
