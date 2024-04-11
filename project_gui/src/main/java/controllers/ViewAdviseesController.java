@@ -23,8 +23,13 @@ public class ViewAdviseesController implements Initializable {
     private Advisor advisor;
 
     @FXML
-    void btnAddAdviseeClicked(MouseEvent event) {
+    void btnAddAdviseeClicked(MouseEvent event) throws IOException {
+        App.setRoot("addadvisee");
+    }
 
+    @FXML
+    void btnViewProgress(MouseEvent event) throws IOException {
+        App.setRoot("advisorcompleted");
     }
 
     @FXML

@@ -16,8 +16,6 @@ public class AdvisorApplicationAreaController implements Initializable {
     @FXML
     private Label lbl_application_area;
     @FXML
-    private Label lbl_class_header;
-    @FXML
     private Label lbl_class_info;
     @FXML
     private Label lbl_college;
@@ -26,11 +24,9 @@ public class AdvisorApplicationAreaController implements Initializable {
     @FXML
     private Label lbl_major_gpa;
     @FXML
-    private Label lbl_major_header;
-    @FXML
     private Label lbl_major_info;
     @FXML
-    private Label lbl_name_header;
+    private Label lbl_name;
     @FXML
     private Label lbl_name_info;
     @FXML
@@ -40,35 +36,31 @@ public class AdvisorApplicationAreaController implements Initializable {
 
     private FACADE facade;
     private Student student;
+    private Advisor advisor;
 
     @FXML
     void btnCompleted(MouseEvent event) throws IOException {
-        App.setRoot("studentcompleted");
+        App.setRoot("advisorcompleted");
     }
 
     @FXML
     void btnIncomplete(MouseEvent event) throws IOException {
-        App.setRoot("studentincomplete");
+        App.setRoot("advisorincomplete");
     }
 
     @FXML
     void btnElectives(MouseEvent event) throws IOException {
-        App.setRoot("studentelectives");
+        App.setRoot("advisorelectives");
     }
 
     @FXML
-    void btnChooseElectives(MouseEvent event) throws Exception {
-        App.setRoot("chooseelectives");
-    }
-
-    @FXML
-    void btnChooseApplicationArea(MouseEvent event) throws Exception {
+    void btnMakeNote(MouseEvent event) throws IOException {
 
     }
 
     @FXML
     void btnBack(MouseEvent event) throws IOException {
-        App.setRoot("studentlanding");
+        App.setRoot("advisorlanding");
     }
 
     @FXML
@@ -80,18 +72,19 @@ public class AdvisorApplicationAreaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         facade = FACADE.getInstance();
-        student = facade.getStudent();
-        lbl_name_header.setText(student.getFirstName() + " " + student.getLastName());
-        lbl_major_header.setText("Major: " + facade.getMajorByUUID(student.getMajor()).getMajorName());
-        lbl_class_header.setText("Classification: " + student.getClassYear());
+        advisor = facade.getAdvisor();
+        if (facade.login("thill")) {
+            student = facade.getStudent();
+        }
+        lbl_name.setText(advisor.getFirstName() + " " + advisor.getLastName());
         lbl_name_info.setText(student.getFirstName() + " " + student.getLastName());
         lbl_id.setText(student.getStudentID());
         lbl_class_info.setText(student.getClassYear());
-        lbl_overall_gpa.setText("3.63");
+        lbl_overall_gpa.setText("3.72");
         lbl_college.setText("College of Engr and Computing");
         lbl_major_info.setText(facade.getMajorByUUID(student.getMajor()).getMajorName());
         lbl_application_area.setText(student.getApplicationType().toString());
-        lbl_major_gpa.setText("3.38");
+        lbl_major_gpa.setText("3.67");
         lbl_application_area_progress.setText(facade.printApplicationAreaProgress());
     }
 
