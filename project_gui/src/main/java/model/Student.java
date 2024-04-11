@@ -249,6 +249,27 @@ public class Student extends User {
         }
     }
 
+    public String printSemesterPlan(String classYear) {
+        StringBuilder semesterInfo = new StringBuilder();
+        for (int semesterNum = 1; semesterNum <= 8; semesterNum++) {
+            semesterInfo.append("Semester ").append(semesterNum).append("\n");
+            for (StudentCourse course : eightSemesterPlan.getStudentCourses()) {
+                if (course.getSemesterNum() == semesterNum) {
+                    if (course.getStatus().equals("Completed")) {
+                        String formatString = "Course ID: %-10s Grade: %-5s Passed: %-7s Status: %s%n";
+                        semesterInfo.append(String.format(formatString, course.getCourseID(), course.getGrade(),
+                                course.getPassed(), course.getStatus()));
+                    } else if (course.getStatus().equals("Planned")) {
+                        String formatString = "Course ID: %-10s Status: %s%n";
+                        semesterInfo.append(String.format(formatString, course.getCourseID(), course.getStatus()));
+                    }
+                }
+            }
+            semesterInfo.append("\n");
+        }
+        return semesterInfo.toString();
+    }
+
     /**
      * Prints the student's completed courses
      * 

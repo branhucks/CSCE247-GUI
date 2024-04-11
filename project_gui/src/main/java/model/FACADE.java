@@ -259,6 +259,10 @@ public class FACADE {
         student.printEightSemesterPlan(student.getClassYear());
     }
 
+    public String printSemesterPlan() {
+        return student.printSemesterPlan(student.getClassYear());
+    }
+
     /**
      * Gets the student's application type
      * 

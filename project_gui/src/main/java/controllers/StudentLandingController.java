@@ -31,8 +31,8 @@ public class StudentLandingController implements Initializable {
     }
 
     @FXML
-    void btnPrintClicked(MouseEvent event) {
-
+    void btnPrintClicked(MouseEvent event) throws IOException {
+        App.setRoot("viewsemesterplan");
     }
 
     @FXML

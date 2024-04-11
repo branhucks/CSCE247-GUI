@@ -1,30 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="895.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="888.0" prefWidth="600.0">
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SemesterPlanController">
+   <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1150.0" prefWidth="600.0">
          <children>
-            <Text layoutX="37.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
-            <Text layoutX="37.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
-            <Text layoutX="33.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classification:" />
-            <Text layoutX="33.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall GPA:" />
-            <Text layoutX="252.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College:" />
-            <Text layoutX="252.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:" />
-            <Text layoutX="252.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application Area:" />
-            <Text layoutX="256.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major GPA:" />
-            <Label fx:id="name_lbl" layoutX="85.0" layoutY="36.0" text="Label" />
-            <Label fx:id="id_lbl" layoutX="71.0" layoutY="71.0" text="Label" />
-            <Label fx:id="classification_lbl" layoutX="124.0" layoutY="101.0" text="Label" />
-            <Label fx:id="overall_gpa_lbl" layoutX="110.0" layoutY="134.0" text="Label" />
-            <Label fx:id="college_lbl" layoutX="316.0" layoutY="36.0" text="Label" />
-            <Label fx:id="major_lbl" layoutX="302.0" layoutY="71.0" text="Label" />
-            <Label fx:id="application_area_lbl" layoutX="358.0" layoutY="110.0" text="Label" />
-            <Label fx:id="major_gpa_lbl" layoutX="336.0" layoutY="143.0" text="Label" />
-         </children></AnchorPane>
-  </content>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1077.0" layoutX="94.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+            <Rectangle height="60.0" layoutX="94.0" layoutY="5.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+            <ImageView fitHeight="126.0" fitWidth="231.0" layoutX="178.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/usclogo_header.png" />
+               </image>
+            </ImageView>
+            <Rectangle fill="#73000a" height="20.0" layoutX="94.0" layoutY="64.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="400.0" />
+            <Text fill="WHITE" layoutX="249.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Semester Plan">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Button layoutX="558.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#btnBack" text="BACK">
+               <font>
+                  <Font name="System Bold" size="6.0" />
+               </font>
+            </Button>
+            <Text layoutX="110.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="110.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="110.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classification:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="110.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall GPA:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="260.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="260.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="260.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application Area:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text layoutX="260.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major GPA:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Label fx:id="lbl_name" layoutX="150.0" layoutY="92.0" text="Label" />
+            <Label fx:id="lbl_id" layoutX="129.0" layoutY="109.0" text="Label" />
+            <Label fx:id="lbl_classification" layoutX="191.0" layoutY="126.0" text="Label" />
+            <Label fx:id="lbl_overall_gpa" layoutX="184.0" layoutY="143.0" text="Label" />
+            <Label fx:id="lbl_college" layoutX="308.0" layoutY="92.0" text="Label" />
+            <Label fx:id="lbl_major" layoutX="299.0" layoutY="109.0" text="Label" />
+            <Label fx:id="lbl_application_area" layoutX="361.0" layoutY="126.0" text="Label" />
+            <Label fx:id="lbl_major_gpa" layoutX="327.0" layoutY="143.0" text="Label" />
+            <Label fx:id="lbl_semester_plan" alignment="TOP_LEFT" layoutX="110.0" layoutY="167.0" prefHeight="891.0" prefWidth="370.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </content>
 </ScrollPane>

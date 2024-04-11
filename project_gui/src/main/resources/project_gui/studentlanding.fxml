@@ -79,12 +79,12 @@
             <Font size="8.0" />
          </font>
       </Label>
-      <Button layoutX="85.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnViewClicked" text="VIEW DEGREE PROGRESS">
+      <Button layoutX="87.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnViewClicked" text="VIEW DEGREE PROGRESS">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button layoutX="227.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnPrintClicked" text="PRINT SEMESTER PLAN">
+      <Button layoutX="226.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnPrintClicked" text="VIEW SEMESTER PLAN">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
