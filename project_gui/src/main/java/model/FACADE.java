@@ -461,8 +461,35 @@ public class FACADE {
         getEightSemesterPlan().addCourse(subject2, num2, sem2);
     }
 
+    /**
+     * Prints the list of possible application areas
+     * 
+     * @param majorUUID | the given major
+     * @return | a string representation of the list of application areas
+     */
     public String printMajorApplicationAreas(String majorUUID) {
         Major major = getMajorByUUID(majorUUID);
         return major.printApplicationAreas(courseList);
+    }
+
+    /**
+     * Adds the chosen application area and courses to the semester plan
+     * 
+     * @param subject1
+     * @param num1
+     * @param subject2
+     * @param num2
+     * @param subject3
+     * @param num3
+     * @param sem1
+     * @param sem2
+     * @param sem3
+     */
+    public void addApplicationAreaCourses(String subject1, String num1, String subject2, String num2, String subject3,
+            String num3, int sem1,
+            int sem2, int sem3) {
+        getEightSemesterPlan().addCourse(subject1, num1, sem1);
+        getEightSemesterPlan().addCourse(subject2, num2, sem2);
+        getEightSemesterPlan().addCourse(subject3, num3, sem3);
     }
 }

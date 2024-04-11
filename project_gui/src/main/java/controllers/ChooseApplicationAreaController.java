@@ -38,12 +38,29 @@ public class ChooseApplicationAreaController implements Initializable {
     private Label lbl_overall_gpa;
     @FXML
     private Label lbl_application_areas;
+    @FXML
+    private CheckBox box_digital_design;
+    @FXML
+    private CheckBox box_dd1;
+    @FXML
+    private CheckBox box_dd2;
+    @FXML
+    private CheckBox box_dd3;
 
     private FACADE facade;
     private Student student;
 
     @FXML
     void btnPlanCourses(MouseEvent event) throws IOException {
+        facade = FACADE.getInstance();
+        student = facade.getStudent();
+        if (box_digital_design.isSelected() && box_dd1.isSelected() && box_dd2.isSelected() && box_dd3.isSelected()) {
+            student.setApplicationType(ApplicationType.DigitalDesign);
+            facade.addApplicationAreaCourses("ARTS", "102", "ARTS", "245", "ARTS", "246", 6, 7, 8);
+            facade.saveUsers();
+        } else {
+            return;
+        }
         App.setRoot("studentapplicationarea");
     }
 
