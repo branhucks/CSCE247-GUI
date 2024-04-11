@@ -33,6 +33,11 @@ public class ViewAdviseesController implements Initializable {
     }
 
     @FXML
+    void btnBack(MouseEvent event) throws IOException {
+        App.setRoot("advisorlanding");
+    }
+
+    @FXML
     void btnLogoutClicked(MouseEvent event) throws IOException {
         facade.logout();
         App.setRoot("home");

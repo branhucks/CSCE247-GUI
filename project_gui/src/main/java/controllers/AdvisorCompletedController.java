@@ -57,7 +57,7 @@ public class AdvisorCompletedController implements Initializable {
 
     @FXML
     void btnMakeNote(MouseEvent event) throws IOException {
-
+        App.setRoot("makenote");
     }
 
     @FXML

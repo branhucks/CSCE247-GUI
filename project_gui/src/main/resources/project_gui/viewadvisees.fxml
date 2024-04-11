@@ -97,6 +97,11 @@
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
+            <Button layoutX="558.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#btnBack" text="BACK">
+               <font>
+                  <Font name="System Bold" size="6.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </content>

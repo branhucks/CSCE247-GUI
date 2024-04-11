@@ -339,7 +339,6 @@ public class FACADE {
     public void makeNote(String studentID, String note) {
         Student student = userList.getStudentByStudentID(studentID);
         student.setNoteFromAdvisor(note);
-
     }
 
     /**
