@@ -295,9 +295,9 @@ public class FACADE {
      */
     public boolean addAdvisee(String studentID) {
         boolean check = true;
-        try{
+        try {
             String studentUUID = userList.getStudentUUIDByStudentID(studentID);
-            if (studentUUID == null){
+            if (studentUUID == null) {
                 check = false;
             }
             advisor.addAdvisee(studentUUID);
@@ -307,9 +307,9 @@ public class FACADE {
                 }
             }
             return check;
-        } catch(Error e){
+        } catch (Error e) {
             return false;
-        }  
+        }
     }
 
     /**
@@ -446,8 +446,23 @@ public class FACADE {
         return major.printElectives(courseList);
     }
 
+    /**
+     * Adds the chosen elective courses to the student's semester plan
+     * 
+     * @param subject1
+     * @param num1
+     * @param subject2
+     * @param num2
+     * @param sem1
+     * @param sem2
+     */
     public void addElectiveCourses(String subject1, String num1, String subject2, String num2, int sem1, int sem2) {
         getEightSemesterPlan().addCourse(subject1, num1, sem1);
         getEightSemesterPlan().addCourse(subject2, num2, sem2);
+    }
+
+    public String printMajorApplicationAreas(String majorUUID) {
+        Major major = getMajorByUUID(majorUUID);
+        return major.printApplicationAreas(courseList);
     }
 }

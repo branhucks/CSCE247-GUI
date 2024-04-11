@@ -140,4 +140,22 @@ public class Major {
         return electiveList.toString();
     }
 
+    public String printApplicationAreas(CourseList courseList) {
+        StringBuilder applicationAreaList = new StringBuilder();
+        for (ApplicationArea applicationArea : applicationAreas) {
+            applicationAreaList.append(String.format("%-105s", applicationArea.getType()));
+            applicationAreaList.append("Credits Needed: 9");
+            applicationAreaList.append("\n");
+            for (String courseUUID : applicationArea.getCourses()) {
+                Course course = courseList.getCourseByUUID(courseUUID);
+                applicationAreaList.append(String.format("%-20s", course.courseID())); // Adjust the width as needed
+                applicationAreaList.append("\t\t");
+                applicationAreaList.append(course.getCourseName());
+                applicationAreaList.append("\n");
+            }
+            applicationAreaList.append("\n");
+        }
+        return applicationAreaList.toString();
+    }
+
 }

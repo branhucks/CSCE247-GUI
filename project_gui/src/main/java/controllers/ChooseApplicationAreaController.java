@@ -73,7 +73,7 @@ public class ChooseApplicationAreaController implements Initializable {
         lbl_major_info.setText(facade.getMajorByUUID(student.getMajor()).getMajorName());
         lbl_application_area.setText(student.getApplicationType().toString());
         lbl_major_gpa.setText("3.38");
-        lbl_application_areas.setText(facade.printMajorElectives(student.getMajor()));
+        lbl_application_areas.setText(facade.printMajorApplicationAreas(student.getMajor()));
     }
 
 }
