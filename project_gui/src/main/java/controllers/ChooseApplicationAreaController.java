@@ -5,13 +5,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import model.*;
 import project_gui.App;
 
-public class StudentApplicationAreaController implements Initializable {
+public class ChooseApplicationAreaController implements Initializable {
 
     @FXML
     private Label lbl_application_area;
@@ -36,34 +37,14 @@ public class StudentApplicationAreaController implements Initializable {
     @FXML
     private Label lbl_overall_gpa;
     @FXML
-    private Label lbl_application_area_progress;
+    private Label lbl_application_areas;
 
     private FACADE facade;
     private Student student;
 
     @FXML
-    void btnCompleted(MouseEvent event) throws IOException {
-        App.setRoot("studentcompleted");
-    }
-
-    @FXML
-    void btnIncomplete(MouseEvent event) throws IOException {
-        App.setRoot("studentincomplete");
-    }
-
-    @FXML
-    void btnElectives(MouseEvent event) throws IOException {
-        App.setRoot("studentelectives");
-    }
-
-    @FXML
-    void btnChooseElectives(MouseEvent event) throws Exception {
-        App.setRoot("chooseelectives");
-    }
-
-    @FXML
-    void btnChooseApplicationArea(MouseEvent event) throws Exception {
-        App.setRoot("chooseapplicationarea");
+    void btnPlanCourses(MouseEvent event) throws IOException {
+        App.setRoot("studentapplicationarea");
     }
 
     @FXML
@@ -92,7 +73,7 @@ public class StudentApplicationAreaController implements Initializable {
         lbl_major_info.setText(facade.getMajorByUUID(student.getMajor()).getMajorName());
         lbl_application_area.setText(student.getApplicationType().toString());
         lbl_major_gpa.setText("3.38");
-        lbl_application_area_progress.setText(facade.printApplicationAreaProgress());
+        lbl_application_areas.setText(facade.printMajorElectives(student.getMajor()));
     }
 
 }

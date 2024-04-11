@@ -63,7 +63,7 @@ public class StudentCompletedController implements Initializable {
 
     @FXML
     void btnChooseApplicationArea(MouseEvent event) throws Exception {
-
+        App.setRoot("chooseapplicationarea");
     }
 
     @FXML
