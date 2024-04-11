@@ -147,12 +147,12 @@
                   <Font size="8.0" />
                </font>
             </Label>
-            <Button layoutX="89.0" layoutY="323.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="107.0" text="CHOOSE ELECTIVES">
+            <Button layoutX="89.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#btnChooseElectives" prefHeight="21.0" prefWidth="107.0" text="CHOOSE ELECTIVES">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="206.0" layoutY="323.0" mnemonicParsing="false" text="CHOOSE APPLICATION AREA">
+            <Button layoutX="206.0" layoutY="323.0" mnemonicParsing="false" onMouseClicked="#btnChooseApplicationArea" text="CHOOSE APPLICATION AREA">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -174,7 +174,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="89.0" layoutY="360.0" mnemonicParsing="false" text="COMPLETED">
+            <Button layoutX="89.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnCompleted" text="COMPLETED">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
@@ -189,9 +189,14 @@
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="402.0" layoutY="360.0" mnemonicParsing="false" text="APPLICATION AREA">
+            <Button layoutX="402.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnApplicationArea" text="APPLICATION AREA">
                <font>
                   <Font name="System Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="558.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#btnBack" text="BACK">
+               <font>
+                  <Font name="System Bold" size="6.0" />
                </font>
             </Button>
          </children>

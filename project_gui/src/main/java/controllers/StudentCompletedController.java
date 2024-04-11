@@ -47,6 +47,31 @@ public class StudentCompletedController implements Initializable {
     }
 
     @FXML
+    void btnElectives(MouseEvent event) throws IOException {
+        App.setRoot("studentelectives");
+    }
+
+    @FXML
+    void btnApplicationArea(MouseEvent event) throws Exception {
+        App.setRoot("studentapplicationarea");
+    }
+
+    @FXML
+    void btnChooseElectives(MouseEvent event) throws Exception {
+        App.setRoot("chooseelectives");
+    }
+
+    @FXML
+    void btnChooseApplicationArea(MouseEvent event) throws Exception {
+
+    }
+
+    @FXML
+    void btnBack(MouseEvent event) throws IOException {
+        App.setRoot("studentlanding");
+    }
+
+    @FXML
     void btnLogoutClicked(MouseEvent event) throws IOException {
         facade.logout();
         App.setRoot("home");

@@ -42,6 +42,16 @@ public class StudentElectivesController implements Initializable {
     private Student student;
 
     @FXML
+    void btnCompleted(MouseEvent event) throws IOException {
+        App.setRoot("studentcompleted");
+    }
+
+    @FXML
+    void btnIncomplete(MouseEvent event) throws IOException {
+        App.setRoot("studentincomplete");
+    }
+
+    @FXML
     void btnApplicationArea(MouseEvent event) throws Exception {
         App.setRoot("studentapplicationarea");
     }
@@ -49,6 +59,16 @@ public class StudentElectivesController implements Initializable {
     @FXML
     void btnChooseElectives(MouseEvent event) throws Exception {
         App.setRoot("chooseelectives");
+    }
+
+    @FXML
+    void btnChooseApplicationArea(MouseEvent event) throws Exception {
+
+    }
+
+    @FXML
+    void btnBack(MouseEvent event) throws IOException {
+        App.setRoot("studentlanding");
     }
 
     @FXML

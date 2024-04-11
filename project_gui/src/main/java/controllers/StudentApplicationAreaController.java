@@ -42,8 +42,33 @@ public class StudentApplicationAreaController implements Initializable {
     private Student student;
 
     @FXML
+    void btnCompleted(MouseEvent event) throws IOException {
+        App.setRoot("studentcompleted");
+    }
+
+    @FXML
+    void btnIncomplete(MouseEvent event) throws IOException {
+        App.setRoot("studentincomplete");
+    }
+
+    @FXML
+    void btnElectives(MouseEvent event) throws IOException {
+        App.setRoot("studentelectives");
+    }
+
+    @FXML
+    void btnChooseElectives(MouseEvent event) throws Exception {
+        App.setRoot("chooseelectives");
+    }
+
+    @FXML
     void btnChooseApplicationArea(MouseEvent event) throws Exception {
 
+    }
+
+    @FXML
+    void btnBack(MouseEvent event) throws IOException {
+        App.setRoot("studentlanding");
     }
 
     @FXML
