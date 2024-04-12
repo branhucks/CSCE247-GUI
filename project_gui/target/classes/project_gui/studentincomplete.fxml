@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentIncompleteController">
+<ScrollPane hbarPolicy="NEVER" hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vvalue="0.72" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentIncompleteController">
    <content>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="600.0">
          <children>
@@ -169,27 +169,27 @@
                   <Font size="10.0" />
                </font>
             </Label>
-            <Text fill="#73000a" layoutX="165.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INCOMPLETE COURSES">
+            <Text fill="#73000a" layoutX="170.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INCOMPLETE COURSES">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="89.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnCompleted" text="COMPLETED">
+            <Button layoutX="85.0" layoutY="360.0" minWidth="100.5" mnemonicParsing="false" onMouseClicked="#btnCompleted" text="COMPLETED">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="195.0" layoutY="360.0" mnemonicParsing="false" text="INCOMPLETE">
+            <Button layoutX="195.0" layoutY="360.0" minWidth="100.5" mnemonicParsing="false" text="INCOMPLETE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="305.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnElectives" text="ELECTIVES">
+            <Button layoutX="305.0" layoutY="360.0" minWidth="100.5" mnemonicParsing="false" onMouseClicked="#btnElectives" text="ELECTIVES">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="402.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnApplicationArea" text="APPLICATION AREA">
+            <Button layoutX="415.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnApplicationArea" text="APPLICATION AREA">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>

@@ -10,186 +10,186 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdvisorIncompleteController">
+<ScrollPane hbarPolicy="NEVER" hmax="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdvisorIncompleteController">
    <content>
       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="600.0">
          <children>
             <Rectangle height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-            <ImageView fitHeight="98.0" fitWidth="200.0" layoutX="4.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="98.0" fitWidth="200.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/usclogo_header.png" />
                </image>
             </ImageView>
-            <Button layoutX="521.0" layoutY="19.0" mnemonicParsing="false" onMouseClicked="#btnLogoutClicked" text="LOGOUT">
+            <Button layoutX="523.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#btnLogoutClicked" text="LOGOUT">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Rectangle fill="#73000a" height="20.0" layoutY="59.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-            <ImageView fitHeight="100.0" fitWidth="600.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle fill="#73000a" height="20.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+            <ImageView fitHeight="100.0" fitWidth="600.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/studentlanding.jpg" />
                </image>
             </ImageView>
-            <Rectangle fill="#73000a" height="37.0" layoutX="90.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="229.0" />
-            <Text fill="WHITE" layoutX="96.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEGREE PROGRESS">
+            <Rectangle fill="#73000a" height="37.0" layoutX="88.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="229.0" />
+            <Text fill="WHITE" layoutX="97.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEGREE PROGRESS">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Text layoutX="90.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT">
+            <Text layoutX="85.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text fill="#73000a" layoutX="89.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMATION" wrappingWidth="174.75936889648438">
+            <Text fill="#73000a" layoutX="85.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMATION" wrappingWidth="174.75936889648438">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Text layoutX="89.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+            <Text layoutX="85.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Text layoutX="89.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+            <Text layoutX="85.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Text layoutX="89.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classification:">
+            <Text layoutX="85.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classification:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Text layoutX="89.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall GPA:">
+            <Text layoutX="85.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Overall GPA:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Text layoutX="200.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College:">
+            <Text layoutX="200.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="College:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Text layoutX="200.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:">
+            <Text layoutX="200.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Text layoutX="200.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application Area:">
+            <Text layoutX="200.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application Area:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Text layoutX="200.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major GPA:">
+            <Text layoutX="200.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Major GPA:">
                <font>
                   <Font name="System Bold" size="8.0" />
                </font>
             </Text>
-            <Label fx:id="lbl_name_info" layoutX="118.0" layoutY="259.0" prefHeight="12.0" prefWidth="64.0">
+            <Label fx:id="lbl_name_info" layoutX="115.0" layoutY="256.0" prefHeight="12.0" prefWidth="64.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_id" layoutX="103.0" layoutY="272.0" prefHeight="12.0" prefWidth="76.0">
+            <Label fx:id="lbl_id" layoutX="102.0" layoutY="269.0" prefHeight="12.0" prefWidth="76.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_class_info" layoutX="144.0" layoutY="285.0" prefHeight="12.0" prefWidth="49.0">
+            <Label fx:id="lbl_class_info" layoutX="137.0" layoutY="282.0" prefHeight="12.0" prefWidth="49.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_overall_gpa" layoutX="140.0" layoutY="298.0" prefHeight="12.0" prefWidth="54.0">
+            <Label fx:id="lbl_overall_gpa" layoutX="136.0" layoutY="295.0" prefHeight="12.0" prefWidth="54.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_college" layoutX="234.0" layoutY="259.0" prefHeight="12.0" prefWidth="140.0">
+            <Label fx:id="lbl_college" layoutX="235.0" layoutY="256.0" prefHeight="12.0" prefWidth="140.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_major_info" layoutX="228.0" layoutY="272.0" prefHeight="12.0" prefWidth="146.0">
+            <Label fx:id="lbl_major_info" layoutX="228.0" layoutY="269.0" prefHeight="12.0" prefWidth="146.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_application_area" layoutX="268.0" layoutY="285.0" prefHeight="12.0" prefWidth="115.0">
+            <Label fx:id="lbl_application_area" layoutX="268.0" layoutY="282.0" prefHeight="12.0" prefWidth="115.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Label fx:id="lbl_major_gpa" layoutX="246.0" layoutY="298.0" prefHeight="12.0" prefWidth="90.0">
+            <Label fx:id="lbl_major_gpa" layoutX="246.0" layoutY="295.0" prefHeight="12.0" prefWidth="90.0">
                <font>
                   <Font size="8.0" />
                </font>
             </Label>
-            <Rectangle height="88.0" layoutX="400.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="112.0" />
-            <Text fill="WHITE" layoutX="412.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree Progress" />
-            <Text fill="WHITE" layoutX="421.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75%">
+            <Rectangle height="88.0" layoutX="400.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="112.0" />
+            <Text fill="WHITE" layoutX="410.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Degree Progress" />
+            <Text fill="WHITE" layoutX="420.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="75%">
                <font>
                   <Font name="System Bold" size="35.0" />
                </font>
             </Text>
-            <Label fx:id="lbl_incomplete_courses" alignment="TOP_LEFT" layoutX="239.0" layoutY="441.0" prefHeight="217.0" prefWidth="114.0" wrapText="true">
+            <Label fx:id="lbl_incomplete_courses" alignment="TOP_LEFT" layoutX="240.0" layoutY="440.0" prefHeight="217.0" prefWidth="114.0" wrapText="true">
                <font>
                   <Font size="10.0" />
                </font>
             </Label>
-            <Text fill="#73000a" layoutX="165.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INCOMPLETE COURSES">
+            <Text fill="#73000a" layoutX="170.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INCOMPLETE COURSES">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button layoutX="89.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnCompleted" text="COMPLETED">
+            <Button layoutX="85.0" layoutY="360.0" minWidth="100.5" mnemonicParsing="false" onMouseClicked="#btnCompleted" text="COMPLETED">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="195.0" layoutY="360.0" mnemonicParsing="false" text="INCOMPLETE">
+            <Button layoutX="195.0" layoutY="360.0" minWidth="100.5" mnemonicParsing="false" text="INCOMPLETE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="305.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnElectives" text="ELECTIVES">
+            <Button layoutX="305.0" layoutY="360.0" minWidth="100.5" mnemonicParsing="false" onMouseClicked="#btnElectives" text="ELECTIVES">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="402.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnApplicationArea" text="APPLICATION AREA">
+            <Button layoutX="415.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#btnApplicationArea" text="APPLICATION AREA">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Button layoutX="558.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#btnBack" text="BACK">
+            <Button layoutX="555.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#btnBack" text="BACK">
                <font>
                   <Font name="System Bold" size="6.0" />
                </font>
             </Button>
-            <Text layoutX="324.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISOR VIEW">
+            <Text layoutX="325.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISOR VIEW">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Text>
-            <Button layoutX="142.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#btnMakeNote" text="MAKE NOTE">
+            <Button layoutX="130.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#btnMakeNote" text="MAKE NOTE">
                <font>
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
-            <Label fx:id="lbl_name" layoutX="15.0" layoutY="59.0" prefHeight="20.0" prefWidth="145.0" textFill="WHITE">
+            <Label fx:id="lbl_name" layoutX="15.0" layoutY="60.0" prefHeight="20.0" prefWidth="145.0" textFill="WHITE">
                <font>
                   <Font size="10.0" />
                </font>
             </Label>
-            <Text fill="WHITE" layoutX="534.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISOR">
+            <Text fill="WHITE" layoutX="530.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISOR">
                <font>
                   <Font name="System Italic" size="10.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="217.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department: Computer Information Systems">
+            <Text fill="WHITE" layoutX="217.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department: Computer Information Systems">
                <font>
                   <Font size="10.0" />
                </font>

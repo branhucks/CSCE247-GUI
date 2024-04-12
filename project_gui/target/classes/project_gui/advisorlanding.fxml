@@ -12,12 +12,12 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdvisorLandingController">
    <children>
       <Rectangle height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-      <ImageView fitHeight="98.0" fitWidth="200.0" layoutX="1.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="98.0" fitWidth="200.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/usclogo_header.png" />
          </image>
       </ImageView>
-      <Button layoutX="523.0" layoutY="21.0" mnemonicParsing="false" onMouseClicked="#btnLogoutClicked" text="LOGOUT">
+      <Button layoutX="523.0" layoutY="20.0" mnemonicParsing="false" onMouseClicked="#btnLogoutClicked" text="LOGOUT">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
@@ -28,7 +28,7 @@
             <Font size="10.0" />
          </font>
       </Label>
-      <Text fill="WHITE" layoutX="530.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISOR">
+      <Text fill="WHITE" layoutX="530.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISOR">
          <font>
             <Font name="System Italic" size="10.0" />
          </font>
@@ -38,54 +38,54 @@
             <Image url="@../images/studentlanding.jpg" />
          </image>
       </ImageView>
-      <Rectangle fill="#73000a" height="37.0" layoutX="88.0" layoutY="159.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="189.0" />
-      <Text fill="WHITE" layoutX="94.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEGREEWORKS">
+      <Rectangle fill="#73000a" height="37.0" layoutX="88.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="189.0" />
+      <Text fill="WHITE" layoutX="97.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEGREEWORKS">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="87.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISING TO">
+      <Text layoutX="85.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADVISING TO">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text fill="#73000a" layoutX="87.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GRADUATION">
+      <Text fill="#73000a" layoutX="85.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GRADUATION">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="87.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DegreeWorks is a tool for students to identify courses they have completed or review the courses they still need to take. It is a helpful tool to keep track of a student's studies and keep them on track for their expected commencement day. " wrappingWidth="184.015625">
+      <Text layoutX="85.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DegreeWorks is a tool for students to identify courses they have completed or review the courses they still need to take. It is a helpful tool to keep track of a student's studies and keep them on track for their expected commencement day. " wrappingWidth="184.015625">
          <font>
             <Font size="8.0" />
          </font>
       </Text>
-      <Text fill="#73000a" layoutX="289.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To-Do:">
+      <Text fill="#73000a" layoutX="290.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To-Do:">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Text>
-      <Button layoutX="85.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnAddAdviseeClicked" text="ADD ADVISEE">
+      <Button layoutX="85.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#btnAddAdviseeClicked" text="ADD ADVISEE">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Button layoutX="174.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#btnViewAdviseesClicked" text="VIEW ADVISEES">
+      <Button layoutX="175.0" layoutY="350.0" mnemonicParsing="false" onMouseClicked="#btnViewAdviseesClicked" text="VIEW ADVISEES">
          <font>
             <Font name="System Bold" size="10.0" />
          </font>
       </Button>
-      <Rectangle fill="#73000a" height="120.0" layoutX="424.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="92.0" />
+      <Rectangle fill="#73000a" height="120.0" layoutX="425.0" layoutY="235.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="91.0" />
       <ImageView fitHeight="130.0" fitWidth="91.0" layoutX="420.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/profilepic.png" />
          </image>
       </ImageView>
-      <Text layoutX="289.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nothing planned for today!" wrappingWidth="99.34765625">
+      <Text layoutX="290.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nothing planned for today!" wrappingWidth="99.34765625">
          <font>
             <Font size="8.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="207.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department: Computer Information Systems">
+      <Text fill="WHITE" layoutX="210.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department: Computer Information Systems">
          <font>
             <Font size="10.0" />
          </font>
