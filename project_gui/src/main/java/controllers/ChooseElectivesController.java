@@ -59,6 +59,11 @@ public class ChooseElectivesController implements Initializable {
     }
 
     @FXML
+    void btnBack(MouseEvent event) throws IOException {
+        App.setRoot("studentcompleted");
+    }
+
+    @FXML
     void btnLogoutClicked(MouseEvent event) throws IOException {
         facade.logout();
         App.setRoot("home");

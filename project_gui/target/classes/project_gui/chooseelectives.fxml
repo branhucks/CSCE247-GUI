@@ -194,6 +194,11 @@
                   <Font name="System Bold" size="10.0" />
                </font>
             </Button>
+            <Button layoutX="555.0" layoutY="380.0" mnemonicParsing="false" onMouseClicked="#btnBack" text="BACK">
+               <font>
+                  <Font name="System Bold" size="6.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </content>

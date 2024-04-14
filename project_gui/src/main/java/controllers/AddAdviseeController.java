@@ -25,6 +25,7 @@ public class AddAdviseeController {
         if (!facade.addAdvisee(studentId)) {
             lbl_error.setText("Invalid Student ID.");
         } else {
+            facade.saveUsers();
             App.setRoot("advisorlanding");
         }
 

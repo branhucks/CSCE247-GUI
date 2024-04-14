@@ -66,7 +66,7 @@ public class ChooseApplicationAreaController implements Initializable {
 
     @FXML
     void btnBack(MouseEvent event) throws IOException {
-        App.setRoot("studentlanding");
+        App.setRoot("studentcompleted");
     }
 
     @FXML

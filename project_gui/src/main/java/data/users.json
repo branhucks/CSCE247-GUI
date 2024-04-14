@@ -294,7 +294,7 @@
         "id": "8b07eebc-d677-4336-8df7-67368a3730be",
         "userType": "Student",
         "classYear": "Junior",
-        "noteFromAdvisor": "Testing note to student",
+        "noteFromAdvisor": "You are on track to graduating on time.",
         "username": "bwest"
     },
     {
@@ -551,13 +551,13 @@
         ],
         "studentID": "W19375679",
         "firstName": "Tawnie",
-        "advisor": "371b2206-440a-4723-b2f0-8b5651c83c37",
+        "advisor": "8ae62f17-9a88-44cf-af75-6f6a1f0581d8",
         "major": "dc6b7328-5992-4f22-928e-b73c72b6e5c7",
         "gpa": 0.0,
         "id": "e83bb729-498d-4e57-8928-1ea40b947577",
         "userType": "Student",
         "classYear": "Junior",
-        "noteFromAdvisor": "It would be helpful if you added STAT as your application area.",
+        "noteFromAdvisor": "It would be helpful to select STAT as your application area.",
         "username": "thill"
     },
     {
@@ -575,7 +575,7 @@
     {
         "firstName": "Osbert",
         "lastName": "Odden",
-        "id": "371b2206-440a-4723-b2f0-8b5651c83c37",
+        "id": "8ae62f17-9a88-44cf-af75-6f6a1f0581d8",
         "userType": "Advisor",
         "advisees": [
             {

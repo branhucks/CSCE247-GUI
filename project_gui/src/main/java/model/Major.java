@@ -125,15 +125,15 @@ public class Major {
     public String printElectives(CourseList courseList) {
         StringBuilder electiveList = new StringBuilder();
         for (Electives elective : electives) {
-            electiveList.append(String.format("%-110s", elective.getElectiveType()));
-            electiveList.append("Credits Needed: ").append(elective.getMinHours());
-            electiveList.append("\n");
+            String electiveType = String.format("%-90s", elective.getElectiveType() + " Elective");
+            String creditsNeeded = "Credits Needed: " + elective.getMinHours();
+            String formattedElectiveInfo = String.format("%s%-20s\n", electiveType, creditsNeeded);
+            electiveList.append(formattedElectiveInfo);
             for (String courseUUID : elective.getCourses()) {
                 Course course = courseList.getCourseByUUID(courseUUID);
-                electiveList.append(String.format("%-20s", course.courseID())); // Adjust the width as needed
-                electiveList.append("\t\t");
-                electiveList.append(course.getCourseName());
-                electiveList.append("\n");
+                String formattedCourseInfo = String.format("\t%-20s\t%s\n", course.courseID(),
+                        course.getCourseName());
+                electiveList.append(formattedCourseInfo);
             }
             electiveList.append("\n");
         }

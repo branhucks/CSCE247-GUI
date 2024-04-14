@@ -148,111 +148,19 @@ public class Student extends User {
     }
 
     /**
-     * Prints the student's degree progression to the console
+     * Prints the student's eight semester plan
      * 
-     * @param eightSemesterPlan | the student's eight semester plan
-     * @param requiredCourses   | the major's required courses
+     * @param classYear
+     * @return
      */
-    public void viewProgress(SemesterPlan eightSemesterPlan, ArrayList<Course> requiredCourses,
-            ArrayList<Electives> majorElectives, ArrayList<ApplicationArea> applicationAreas, CourseList courseList,
-            MajorList majorList) {
-        System.out.println("Student: " + getFirstName() + " " + getLastName() + "\tMajor: "
-                + majorList.getMajorByUUID(getMajor()).getMajorName() + "\t\tClassification: "
-                + this.classYear);
-        // Print completed required courses
-        System.out.println("\n********* Completed Courses **********");
-        for (Course requiredCourse : requiredCourses) {
-            for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
-                if (requiredCourse.courseID().equals(studentCourse.getCourseID())
-                        && studentCourse.getStatus().equals("Completed")) {
-                    System.out
-                            .println("Course ID: " + requiredCourse.courseID() + "\tGrade: " + studentCourse.getGrade()
-                                    + "\tPassed: " + studentCourse.getPassed());
-                }
-            }
-        }
-        // Print incomplete required courses
-        System.out.println("\n********* Incomplete Courses **********");
-        for (Course requiredCourse : requiredCourses) {
-            for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
-                if (requiredCourse.courseID().equals(studentCourse.getCourseID())
-                        && studentCourse.getStatus().equals("Planned")) {
-                    System.out.println("Course ID: " + requiredCourse.courseID());
-                }
-            }
-        }
-        // Print Electives progress
-        System.out.println("\n********* Elective Progress **********");
-        for (Electives electives : majorElectives) {
-            String formatString = "%-20s Credits Needed: %d";
-            System.out.printf(formatString, electives.getElectiveType() + " Elective", electives.getMinHours());
-            System.out.println();
-            for (String electiveUUID : electives.getCourses()) {
-                for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
-                    if (studentCourse.getCourseID().equals(courseList.getCourseIDByCourseUUID(electiveUUID))
-                            && studentCourse.getStatus().equals("Completed")) {
-                        System.out.println("\tCourse ID: " + studentCourse.getCourseID() + "\tGrade: "
-                                + studentCourse.getGrade() + "\tPassed " + studentCourse.getPassed());
-                    }
-                }
-            }
-        }
-        // Print Application Area Progress
-        System.out.println("\n********** Application Area Progress **********");
-        if (getApplicationType().toString().equals("NULL")) {
-            System.out.println("No Application Area Selected.\tCredits Needed: 9");
-            return;
-        } else {
-            System.out.println("Application Area: " + getApplicationType().toString() + "\tCredits Needed: 9");
-        }
-        for (ApplicationArea applicationArea : applicationAreas) {
-            if (applicationArea.getType().toString().equals(getApplicationType().toString())) {
-                for (String aaCourseUUID : applicationArea.getCourses()) {
-                    for (StudentCourse studentCourse : eightSemesterPlan.getStudentCourses()) {
-                        if (studentCourse.getCourseID().equals(courseList.getCourseIDByCourseUUID(aaCourseUUID))
-                                && studentCourse.getStatus().equals("Completed")) {
-                            System.out.println("Course ID: " + studentCourse.getCourseID() + "\tGrade: "
-                                    + studentCourse.getGrade() + "\tPassed " + studentCourse.getPassed());
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * Prints the eight semester plan beautifully to a file
-     */
-    public void printEightSemesterPlan(String classYear) {
-        try {
-            FileWriter writer = new FileWriter(getStudentID() + "_SemesterPlan.txt");
-            for (int semesterNum = 1; semesterNum <= 8; semesterNum++) {
-                writer.write("Semester " + semesterNum + "\n");
-                for (StudentCourse course : eightSemesterPlan.getStudentCourses()) {
-                    if (course.getSemesterNum() == semesterNum) {
-                        if (course.getStatus().equals("Completed")) {
-                            String formatString = "Course ID: %-10s Grade: %-5s Passed: %-7s Status: %s\n";
-                            writer.write(String.format(formatString, course.getCourseID(), course.getGrade(),
-                                    course.getPassed(), course.getStatus()));
-                        } else if (course.getStatus().equals("Planned")) {
-                            String formatString = "Course ID: %-10s Status: %s\n";
-                            writer.write(String.format(formatString, course.getCourseID(), course.getStatus()));
-                        }
-                    }
-                }
-                writer.write("\n");
-            }
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("An error occurred while writing to the file.");
-            e.printStackTrace();
-        }
-    }
-
     public String printSemesterPlan(String classYear) {
         StringBuilder semesterInfo = new StringBuilder();
         for (int semesterNum = 1; semesterNum <= 8; semesterNum++) {
-            semesterInfo.append("Semester ").append(semesterNum).append("\n");
+            if (semesterNum == 6) {
+                semesterInfo.append("Semester ").append(semesterNum).append(" | PRESENT\n");
+            } else {
+                semesterInfo.append("Semester ").append(semesterNum).append("\n");
+            }
             for (StudentCourse course : eightSemesterPlan.getStudentCourses()) {
                 if (course.getSemesterNum() == semesterNum) {
                     if (course.getStatus().equals("Completed")) {
@@ -283,9 +191,16 @@ public class Student extends User {
                 if (requiredCourse.courseID().equals(studentCourse.getCourseID())
                         && studentCourse.getStatus().equals("Completed")) {
                     completedCourses.append("Course ID: ").append(requiredCourse.courseID())
-                            .append("\t\tGrade: ").append(studentCourse.getGrade())
-                            .append("\t\t\tPassed: ").append(studentCourse.getPassed())
-                            .append("\n");
+                            .append("\t\tGrade: ").append(studentCourse.getGrade());
+
+                    // Check if the grade is 100, if so, indent Passed one more time
+                    if (studentCourse.getGrade() == 100) {
+                        completedCourses.append("\t\tPassed: ").append(studentCourse.getPassed());
+                    } else {
+                        completedCourses.append("\t\t\tPassed: ").append(studentCourse.getPassed());
+                    }
+
+                    completedCourses.append("\n");
                 }
             }
         }
@@ -322,7 +237,7 @@ public class Student extends User {
     public String printElectiveProgress(ArrayList<Electives> majorElectives, CourseList courseList) {
         StringBuilder electiveProgress = new StringBuilder();
         for (Electives electives : majorElectives) {
-            String formatString = "%-20s Credits Needed: %d\n";
+            String formatString = "%-40s Credits Needed: %d\n"; // Adjusted format string
             electiveProgress.append(
                     String.format(formatString, electives.getElectiveType() + " Elective", electives.getMinHours()));
             for (String electiveUUID : electives.getCourses()) {
@@ -349,11 +264,11 @@ public class Student extends User {
     public String printApplicationAreaProgress(ArrayList<ApplicationArea> applicationAreas, CourseList courseList) {
         StringBuilder applicationAreaProgress = new StringBuilder();
         if (getApplicationType().toString().equals("NULL")) {
-            applicationAreaProgress.append("No Application Area Selected.\tCredits Needed: 9\n");
+            applicationAreaProgress.append("No Application Area Selected.\t\t\tCredits Needed: 9\n");
             return applicationAreaProgress.toString();
         } else {
             applicationAreaProgress.append("Application Area: ").append(getApplicationType().toString())
-                    .append("\tCredits Needed: 9\n");
+                    .append("\t\t\tCredits Needed: 9\n");
         }
         for (ApplicationArea applicationArea : applicationAreas) {
             if (applicationArea.getType().toString().equals(getApplicationType().toString())) {

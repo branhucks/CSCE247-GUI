@@ -252,13 +252,6 @@ public class FACADE {
         return student.getEightSemesterPlan();
     }
 
-    /**
-     * Creates a transcript of the student's data
-     */
-    public void printEightSemesterPlan() {
-        student.printEightSemesterPlan(student.getClassYear());
-    }
-
     public String printSemesterPlan() {
         return student.printSemesterPlan(student.getClassYear());
     }
@@ -317,25 +310,6 @@ public class FACADE {
     }
 
     /**
-     * View student's degree progress as an advisor
-     * 
-     * @param studentID | the student to check their progress
-     */
-    public void viewStudentProgress(String studentID) {
-        Student student = userList.getStudentByStudentID(studentID);
-        SemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
-        String majorUUID = student.getMajor();
-        Major studentMajor = majorList.getMajorByUUID(majorUUID);
-        ArrayList<String> requiredCoursesUUIDs = studentMajor.getRequiredCourses();
-        ArrayList<Course> requiredCourses = new ArrayList<>();
-        for (String uuid : requiredCoursesUUIDs) {
-            requiredCourses.add(getCourseByUUID(uuid));
-        }
-        student.viewProgress(eightSemesterPlan, requiredCourses, studentMajor.getElectives(),
-                studentMajor.getApplicationAreas(), courseList, majorList);
-    }
-
-    /**
      * Makes a note to the student
      * 
      * @param studentID | the student to write the note
@@ -352,22 +326,6 @@ public class FACADE {
      */
     public String viewNote() {
         return student.getNoteFromAdvisor();
-    }
-
-    /**
-     * Prints a student's degree progress to the console
-     */
-    public void viewProgress() {
-        SemesterPlan eightSemesterPlan = student.getEightSemesterPlan();
-        String majorUUID = student.getMajor();
-        Major studentMajor = majorList.getMajorByUUID(majorUUID);
-        ArrayList<String> requiredCoursesUUIDs = studentMajor.getRequiredCourses();
-        ArrayList<Course> requiredCourses = new ArrayList<>();
-        for (String uuid : requiredCoursesUUIDs) {
-            requiredCourses.add(getCourseByUUID(uuid));
-        }
-        student.viewProgress(eightSemesterPlan, requiredCourses, studentMajor.getElectives(),
-                studentMajor.getApplicationAreas(), courseList, majorList);
     }
 
     /**
